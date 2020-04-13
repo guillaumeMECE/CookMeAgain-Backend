@@ -2,6 +2,8 @@
 
 module.exports = {
 
+    ScrappingFromUrl: require('./scrapper/ScrappingFromUrl'),
+
     // Ashtray handlers
     CreateAshtray: require('./ashtray/Create'),
     ReadOneAshtray: require('./ashtray/ReadOne'),

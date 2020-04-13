@@ -24,9 +24,15 @@ const { CreateUserQuestion, ReadUserQuestions, ReadUserQuestion, UpdateUserQuest
 
 // MIDDLEWARES
 const { middleware } = require('@middlewares');
+
+const{ScrappingFromUrl} = require('@controllers');
+
 /**
  * Routes
  */
+
+router.get('/scrapper', ScrappingFromUrl);
+
 // AUTH ROUTES
 router.post('/register', RegisterUser);
 router.post('/login', LoginUser);
