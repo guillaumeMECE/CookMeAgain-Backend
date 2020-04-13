@@ -7,7 +7,7 @@ const { AuthServices } = require('@services');
 const rp = require('request-promise');
 const $ = require('cheerio');
 // const url = 'https://www.marmiton.org/recettes/recette_mayonnaise-au-thermomix_374847.aspx';
-const url = 'https://www.marmiton.org/recettes/recette_papillotes-de-maquereaux-au-barbecue_57711.aspx';
+const url = '"https://www.marmiton.org/recettes/recette_papillotes-de-maquereaux-au-barbecue_57711.aspx"';
 
 /**
  * Request structure
@@ -21,6 +21,12 @@ const url = 'https://www.marmiton.org/recettes/recette_papillotes-de-maquereaux-
 const secure = async (req) => {
 
     const inputs = {};
+
+    if (req.body.url === undefined || req.body.url === null) {
+        throw new Error('Url undefined/null');
+    }
+    inputs.url = req.body.url;
+
     return inputs;
 };
 
@@ -31,7 +37,7 @@ const process = async (inputs) => {
     try {
         const output = {};
 
-        const html = await rp(url);
+        const html = await rp(inputs.url);
 
         const rawTitle = $('h1', html).text(); // Name of the recipe
         output.title = rawTitle;
