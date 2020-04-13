@@ -85,7 +85,6 @@ const scrappingFromUrl = async (req, res) => {
 
         const output = await process(inputs);
 
-        // res.cookie('token',token,{ expires: new Date(Date.now() + 9000000000000), httpOnly: true });
         res.status(200).json({ output });
     } catch (error) {
         console.log('ERROR MESSAGE :', error.message);
@@ -95,84 +94,3 @@ const scrappingFromUrl = async (req, res) => {
 };
 
 module.exports = scrappingFromUrl;
-
-
-// {
-//     type: 'text',
-//         data: '\n\t\t\t\t\t',
-//             parent: {
-//         type: 'tag',
-//             name: 'li',
-//                 namespace: 'http://www.w3.org/1999/xhtml',
-//                     attribs: [Object: null prototype] {
-//             class: 'recipe-ingredients__list__item'
-//         },
-//         'x-attribsNamespace': [Object: null prototype] { class: undefined },
-//         'x-attribsPrefix': [Object: null prototype] { class: undefined },
-//         children: [[Circular], [Object], [Object], [Object]],
-//             parent: {
-//             type: 'tag',
-//                 name: 'ul',
-//                     namespace: 'http://www.w3.org/1999/xhtml',
-//                         attribs: [Object: null prototype],
-//                             'x-attribsNamespace': [Object: null prototype],
-//                                 'x-attribsPrefix': [Object: null prototype],
-//                                     children: [Array],
-//                                         parent: [Object],
-//                                             prev: [Object],
-//                                                 next: [Object]
-//         },
-//         prev: {
-//             type: 'text',
-//                 data: '\n\t\t\t\t\t\t\t',
-//                     parent: [Object],
-//                         prev: null,
-//                             next: [Circular]
-//         },
-//         next: {
-//             type: 'text',
-//                 data: '\n\t  \t\t\t\t',
-//                     parent: [Object],
-//                         prev: [Circular],
-//                             next: [Object]
-//         }
-//     },
-//     prev: null,
-//         next: {
-//         type: 'tag',
-//             name: 'img',
-//                 namespace: 'http://www.w3.org/1999/xhtml',
-//                     attribs: [Object: null prototype] {
-//             class: 'ingredients-list__item__icon',
-//                 src: 'https://assets.afcdn.com/recipe/20171128/75634_w100h100c1cx1250cy1250cxt0cyt0cxb2500cyb2500.jpg'
-//         },
-//         'x-attribsNamespace': [Object: null prototype] { class: undefined, src: undefined },
-//         'x-attribsPrefix': [Object: null prototype] { class: undefined, src: undefined },
-//         children: [],
-//             parent: {
-//             type: 'tag',
-//                 name: 'li',
-//                     namespace: 'http://www.w3.org/1999/xhtml',
-//                         attribs: [Object: null prototype],
-//                             'x-attribsNamespace': [Object: null prototype],
-//                                 'x-attribsPrefix': [Object: null prototype],
-//                                     children: [Array],
-//                                         parent: [Object],
-//                                             prev: [Object],
-//                                                 next: [Object]
-//         },
-//         prev: [Circular],
-//             next: {
-//             type: 'tag',
-//                 name: 'div',
-//                     namespace: 'http://www.w3.org/1999/xhtml',
-//                         attribs: [Object: null prototype] { },
-//             'x-attribsNamespace': [Object: null prototype] { },
-//             'x-attribsPrefix': [Object: null prototype] { },
-//             children: [Array],
-//                 parent: [Object],
-//                     prev: [Circular],
-//                         next: [Object]
-//         }
-//     }
-// }
