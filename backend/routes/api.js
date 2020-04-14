@@ -31,7 +31,7 @@ const{ScrappingFromUrl} = require('@controllers');
  * Routes
  */
 
-router.get('/scrapper', ScrappingFromUrl);
+router.post('/scrapper', ScrappingFromUrl);
 
 // AUTH ROUTES
 router.post('/register', RegisterUser);
