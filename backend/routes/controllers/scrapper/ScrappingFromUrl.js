@@ -1,7 +1,4 @@
-const bcrypt = require('bcrypt');
-const { AuthModel, UserModel } = require('@models');
-const { formatChecker } = require('@core');
-const { AuthServices } = require('@services');
+
 
 
 const rp = require('request-promise');

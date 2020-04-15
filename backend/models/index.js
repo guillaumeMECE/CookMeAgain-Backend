@@ -3,11 +3,6 @@
 module.exports = {
 
     RecipeModel: require('./recipe'),
-    // Mongoose Model
-    AuthModel: require('./Auth'),
-    TodoModel: require('./Todo'),
+    // Mongoose Modelrs
     UserModel: require('./User'),
-    AshtrayModel: require('./Ashtray'),
-    QuestionModel: require('./question'),
-    UserQuestionModel: require('./userQuestion')
 };
