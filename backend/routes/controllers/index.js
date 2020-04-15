@@ -2,7 +2,13 @@
 
 module.exports = {
 
+    SignInWithGoogle: require('./auth/SignInWithGoogle'),
+
     ScrappingFromUrl: require('./scrapper/ScrappingFromUrl'),
+
+    // Recipe handlers
+    CreateRecipe: require('./recipe/Create'),
+    ReadRecipe: require('./recipe/Read'),
 
     // Ashtray handlers
     CreateAshtray: require('./ashtray/Create'),
@@ -13,7 +19,6 @@ module.exports = {
     DeleteAshtray: require('./ashtray/Delete'),
 
     // auth handlers
-    RegisterUser: require('./auth/RegisterUser'),
     LoginUser: require('./auth/LoginUser'),
 
     // question handlers

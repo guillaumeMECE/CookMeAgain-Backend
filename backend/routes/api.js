@@ -14,7 +14,7 @@ const router = Router();
 const { ReadAshtray, ReadOneAshtray, CreateAshtray, DeleteAshtray, ResetAshtray, UpdateAshtray } = require('@controllers');
 
 // AUTH IMPORT
-const { RegisterUser, LoginUser } = require('@controllers');
+const { SignInWithGoogle, LoginUser } = require('@controllers');
 
 // QUESTION IMPORT
 const { CreateQuestion, ReadQuestions, ReadQuestion, UpdateQuestion, DeleteQuestion } = require('@controllers');
@@ -24,17 +24,22 @@ const { CreateUserQuestion, ReadUserQuestions, ReadUserQuestion, UpdateUserQuest
 
 // MIDDLEWARES
 const { middleware } = require('@middlewares');
+const { scrapper } = require('@middlewares');
 
 const{ScrappingFromUrl} = require('@controllers');
+const{CreateRecipe,ReadRecipe} = require('@controllers');
 
 /**
  * Routes
  */
 
+router.post('/recipe',scrapper, CreateRecipe);
+router.post('/recipe/read', ReadRecipe);
+
+router.post('/signin/google', SignInWithGoogle);
 router.post('/scrapper', ScrappingFromUrl);
 
 // AUTH ROUTES
-router.post('/register', RegisterUser);
 router.post('/login', LoginUser);
 
 // TODO ROUTES
