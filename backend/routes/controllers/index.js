@@ -8,6 +8,7 @@ module.exports = {
 
     // Recipe handlers
     CreateRecipe: require('./recipe/Create'),
+    ReadRecipe: require('./recipe/Read'),
 
     // Ashtray handlers
     CreateAshtray: require('./ashtray/Create'),

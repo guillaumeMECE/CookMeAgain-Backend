@@ -27,13 +27,14 @@ const { middleware } = require('@middlewares');
 const { scrapper } = require('@middlewares');
 
 const{ScrappingFromUrl} = require('@controllers');
-const{CreateRecipe} = require('@controllers');
+const{CreateRecipe,ReadRecipe} = require('@controllers');
 
 /**
  * Routes
  */
 
 router.post('/recipe',scrapper, CreateRecipe);
+router.get('/recipe', ReadRecipe);
 
 router.post('/signin/google', SignInWithGoogle);
 router.post('/scrapper', ScrappingFromUrl);
