@@ -34,7 +34,7 @@ const{CreateRecipe,ReadRecipe} = require('@controllers');
  */
 
 router.post('/recipe',scrapper, CreateRecipe);
-router.get('/recipe', ReadRecipe);
+router.post('/recipe/read', ReadRecipe);
 
 router.post('/signin/google', SignInWithGoogle);
 router.post('/scrapper', ScrappingFromUrl);
