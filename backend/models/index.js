@@ -2,6 +2,7 @@
 
 module.exports = {
 
+    RecipeModel: require('./recipe'),
     // Mongoose Model
     AuthModel: require('./Auth'),
     TodoModel: require('./Todo'),
