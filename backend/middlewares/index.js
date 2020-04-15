@@ -2,5 +2,6 @@
 
 module.exports = {
     authorizeUser: require('./authorizeUser'),
-    middleware: require('./middleware')
+    middleware: require('./middleware'),
+    scrapper: require('./scrapper')
 };

@@ -7,7 +7,7 @@ const name = 'Recipe';
 const attributes = {
     ingredients_list:
     {
-        type: [{qt:Number, ingredient:String}]
+        type: [{qt:String, ingredient:String}]
     },
     preparation_list: {
         type: [String],
