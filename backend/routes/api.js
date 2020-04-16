@@ -13,11 +13,11 @@ const { scrapper } = require('@middlewares');
  */
 
 // AUTH IMPORT
-const { ScrappingFromUrl } = require('@controllers');
-const { SignInWithGoogle } = require('@controllers');
+const { ScrappingFromUrl } = require('./controllers');
+const { SignInWithGoogle } = require('./controllers');
 
 
-const{CreateRecipe,ReadRecipe,ReadOneRecipe} = require('@controllers');
+const{CreateRecipe,ReadRecipe,ReadOneRecipe} = require('./controllers');
 
 /**
  * Routes
