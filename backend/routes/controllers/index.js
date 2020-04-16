@@ -7,6 +7,7 @@ module.exports = {
     // Recipe handlers
     CreateRecipe: require('./recipe/Create'),
     ReadRecipe: require('./recipe/Read'),
+    ReadOneRecipe: require('./recipe/ReadOne'),
 
     ScrappingFromUrl:require('./scrapper/ScrappingFromUrl')
 };

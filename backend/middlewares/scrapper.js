@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const { AuthModel, UserModel } = require('@models');
 const { formatChecker } = require('@core');
 const { AuthServices } = require('@services');
+const {secureInput} = require('@core')
 
 
 const rp = require('request-promise');
@@ -49,7 +50,7 @@ const process = async (req) => {
         const lengthOf_rawPreparationList = $('.recipe-preparation__list__item', html).length; // Preparation List of the recipe
         req.body.preparation_list = [];
         for (let id = 0; id < lengthOf_rawPreparationList; id++) {
-            req.body.preparation_list.push($('.recipe-preparation__list__item', html)[id].children[0].data)
+            req.body.preparation_list.push(secureInput.sanitizeString($('.recipe-preparation__list__item', html)[id].children[0].data))
         }
 
         const lengthOf_rawIngredientQt = $('.recipe-ingredient-qt', html).length; // Preparation List of the recipe
@@ -68,7 +69,7 @@ const process = async (req) => {
                 req.body.ingredients_list.push(
                     {
                         qt: rawQt,
-                        ingredient: $('.ingredient', html)[id].children[0].data
+                        ingredient: secureInput.sanitizeString($('.ingredient', html)[id].children[0].data)
                     });
             }
         }

@@ -17,7 +17,7 @@ const { ScrappingFromUrl } = require('@controllers');
 const { SignInWithGoogle } = require('@controllers');
 
 
-const{CreateRecipe,ReadRecipe} = require('@controllers');
+const{CreateRecipe,ReadRecipe,ReadOneRecipe} = require('@controllers');
 
 /**
  * Routes
@@ -25,6 +25,7 @@ const{CreateRecipe,ReadRecipe} = require('@controllers');
 
 router.post('/recipe',scrapper, CreateRecipe);
 router.post('/recipe/read', ReadRecipe);
+router.post('/recipe/readone', ReadOneRecipe);
 
 router.post('/signin/google', SignInWithGoogle);
 router.post('/scrapper', ScrappingFromUrl);

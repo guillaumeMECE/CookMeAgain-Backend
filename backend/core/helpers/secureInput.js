@@ -4,9 +4,9 @@ const sanitizeString = (textRaw) => {
 
     const textRawToString = textRaw.toString();
     const textRawTrim = textRawToString.trim();
-    const textRawToLowerCase = textRawTrim.toLowerCase();
+    // const textRawToLowerCase = textRawTrim.toLowerCase();
 
-    result = textRawToLowerCase;
+    result = textRawTrim;
 
     return result;
 };
