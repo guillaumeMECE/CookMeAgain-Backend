@@ -4,5 +4,5 @@ module.exports = {
 
     RecipeModel: require('./recipe'),
     // Mongoose Modelrs
-    UserModel: require('./User'),
+    UserModel: require('./user'),
 };
