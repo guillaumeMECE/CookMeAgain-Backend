@@ -13,8 +13,7 @@ const app = require('./app');
  */
 
 const port = process.env.PORT || 3030;
-const mongoDbUri = process.env.MONGODB_URI || 'mongodb+srv://guillaumemaurin:b89cd71df@cook-me-again-zjkde.gcp.mongodb.net/test?retryWrites=true&w=majority';
-const mongoDbDatabase = process.env.MONGODB_DATABASE || 'cook-me-again';
+const mongoDbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/cook-me-again' ;
 
 /**
  * Connect to MongoDB database.
@@ -23,10 +22,10 @@ const mongoDbDatabase = process.env.MONGODB_DATABASE || 'cook-me-again';
 // mongoose.connect(`${mongoDbUri}/${mongoDbDatabase}`, { useNewUrlParser: true, useFindAndModify: false }, (err) => {
 mongoose.connect(`${mongoDbUri}`, { useNewUrlParser: true, useFindAndModify: false }, (err) => {
     if (err) {
-        console.log(`Error trying to connect to db: ${mongoDbDatabase}`);
+        console.log(`Error trying to connect to db: ${mongoDbUri}`);
         console.log(err);
     } else {
-        console.log(`Connected to db: ${mongoDbDatabase}`);
+        console.log(`Connected to db: ${mongoDbUri}`);
     }
 });
 
